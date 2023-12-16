@@ -1,16 +1,15 @@
 "use strict";
 
-const button = document.getElementById("btn");
-const bodyEl = document.querySelector("body");
+const button = document.getElementById("btn")
 
-const generateRandomNumber = () => {
-    return Math.floor(Math.random() * 256);
-};
 
-const generateRandomColor = () => {
-    return `rgb(${generateRandomNumber()}, ${generateRandomNumber()}, ${generateRandomNumber()})`;
-};
+function randomRGBColor(){
+    const red = Math.floor(Math.random()*256);
+    const green = Math.floor(Math.random()*256);
+    const blue = Math.floor(Math.random()*256);
+    return `rgb(${red}, ${green}, ${blue})`;
+}
 
-button.addEventListener("click", () => {
-    bodyEl.style.backgroundColor = generateRandomColor();
-});
+button.addEventListener("click",()=>{
+    document.body.style.backgroundColor = randomRGBColor();
+})
