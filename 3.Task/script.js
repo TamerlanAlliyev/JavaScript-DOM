@@ -1,15 +1,16 @@
-const textAreaEl = document.getElementById("text");
-const countEl = document.querySelector(".count");
+const inputEl = document.getElementById("text")
+let countEl = document.querySelector(".count");
 
-textAreaEl.addEventListener("input", () => {
-    const length = textAreaEl.value.length; 
-
-    countEl.textContent = textAreaEl.value.length;
-    if (length > 20) {
-        textAreaEl.style.color = "red"; 
+inputEl.addEventListener("input", ()=>{
+    countEl.textContent = inputEl.value.length
+    if(inputEl.value.length>10){
+        inputEl.style.border = "1px solid red";
+        inputEl.style.color = "red";
         countEl.style.color = "red";
-    } else {
-        textAreaEl.style.color = ""; 
-        countEl.style.color = ""; 
     }
-});
+    else{
+        inputEl.style.border = "inherit";
+        inputEl.style.color = "inherit";
+        countEl.style.color = "inherit";
+    }
+})
