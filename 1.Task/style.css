@@ -67,8 +67,6 @@ body{
     display: none;
 }
 
-.icon:active{
-    display: none;
+.bottom-box.active{
+    display: block;
 }
-
-
